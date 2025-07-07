@@ -1,38 +1,279 @@
-.App {
+body {
+  background-color: #0a0f10;
+  color: #ffffff;
+   font-family: 'Orbitron', sans-serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.mobile-warning {
+  display: none;
+  background-color: #0a0f10;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mobile-message {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.mobile-brand {
+  font-size: 2.5rem;
+  color: red;
+  text-shadow: 0 0 6px red;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.mobile-tagline {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.mobile-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px red);
+  margin-bottom: 20px;
+}
+
+.notify-btn {
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.notify-btn:hover {
+  background-color: red;
+  color: black;
+  box-shadow: 0 0 8px red;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-warning {
+    display: flex;
+  }
+
+  .App, .main-site, .hero-section, .navbar, .container, header, footer {
+    display: none !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f10; /* match your site's bg */
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 6px;
+  box-shadow: 0 0 10px red;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff3333;
+  box-shadow: 0 0 12px #ff3333;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: red #0a0f10;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* stays above other content */
+  background-color: #0a0f10;
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.1); /* subtle glow */
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #0a0f10;
+    padding: 1rem 0;
+    border-top: 1px solid red;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* Spacing between links */
+  }
+
+  .log, .sign {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+
+
+.texty {
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.texty:hover {
+  color: red;
+  transform: scale(1.08);
+  text-shadow: 0 0 4px red, 0 0 8px red;
+}
+
+.texty::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease-in-out;
+}
+
+.texty:hover::after {
+  width: 100%;
+}
+
+.log {
+  background-color: transparent;
+  color: white;
+  font-weight: 550;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.log:hover {
+  color: red;
+  border: 2px solid red;
+  transform: scale(1.08);
+  text-shadow: 0 0 6px red;
+}
+
+.sign {
+  background-color: red;
+  color: black;
+  border: none;
+  font-weight: 550;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign:hover {
+  background-color: black;
+  color: red;
+  box-shadow: 0 0 10px red;
+}
+
+/* Optional: spacing between nav items */
+.nav li {
+  margin: 0 10px;
+}
+
+header {
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.2);
+  background-color: #0a0f10;
+}
+.logo-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px red;
+}
+
+.custom-toggler {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.hamburger {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: red;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.custom-toggler {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  .custom-toggler {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+.brand-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: red;
+  text-shadow: 0 0 3px #ff0000a0, 0 0 5px #ff000050;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s ease;
+}
+
+.brand-name:hover {
+  text-shadow: 0 0 6px #ff0000cc, 0 0 12px #ff000080;
 }

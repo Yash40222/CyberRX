@@ -1,0 +1,143 @@
+.hero-section {
+  background-color: #0a0f10;
+  padding: 60px 20px;
+  color: white;
+  min-height: 80vh;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.typewriter-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+  font-family: 'Orbitron', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  padding-left: 30px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.static-text {
+  color: white;
+  display: inline-block;
+}
+
+.typewriter-text {
+  display: inline-block;
+  color: red;
+  text-shadow: 0 0 4px red;
+  border-right: 2px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(9, end) infinite, blink 0.7s step-end infinite alternate;
+  width: 0ch;
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  40% {
+    width: 9ch;
+  }
+  70% {
+    width: 9ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  padding-left: 30px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  background-color: red;
+  color: black;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+.explore-btn:hover {
+  background-color: black;
+  color: red;
+  box-shadow: 0 0 10px red;
+}
+
+.hero-img img {
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  height: auto;
+  filter: drop-shadow(0 0 6px red);
+}
+
+/* 📱 Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-img img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+    height: auto;
+    filter: drop-shadow(0 0 6px red);
+  }
+
+  .typewriter-heading {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero-text p {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .explore-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+.hero-img img {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 4px red);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 8px red);
+    transform: scale(1.02);
+  }
+  100% {
+    filter: drop-shadow(0 0 4px red);
+    transform: scale(1);
+  }
+}
