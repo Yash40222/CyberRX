@@ -1,4 +1,7 @@
 import React from "react";
+import About from "./about";
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   return (
@@ -53,7 +56,7 @@ function Header() {
               <a href="/pricing" className="nav-link texty px-3">Pricing</a>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-link texty px-3">About</a>
+              <Link to="/about" className="nav-link texty px-3">About</Link>
             </li>
           </ul>
 
