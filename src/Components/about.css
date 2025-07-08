@@ -92,3 +92,9 @@
     font-size: 18px;
   }
 }
+
+.about-highlight {
+  color: #ff1a1a;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff1a1a;
+}

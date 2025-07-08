@@ -34,7 +34,7 @@ const About = () => {
           <div className="about-block">
             <h3>Who's Behind Cyber-RX?</h3>
             <p>
-              👨‍💻 A solo dev named Yashdeep Chaurasia, fueled by coffee and curiosity.
+              👨‍💻 A solo dev named <span className="about-highlight">Yashdeep Chaurasia</span>, fueled by coffee and curiosity.
               Cyber-RX proves that conviction + code beats any budget.
             </p>
           </div>
@@ -50,7 +50,7 @@ const About = () => {
 
         <div className="about-cta">
           <p>Whether you're a student, ethical hacker, or just tired of scams — Cyber-RX is for you.</p>
-          <a href="/tools">Explore Our Tools</a>
+          <a href="/features">Explore Our Tools</a>
         </div>
       </div>
     </section>
