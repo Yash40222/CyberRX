@@ -1,0 +1,76 @@
+.email-detector-container {
+  background-color: #0b0b0d;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.glow-heading {
+  color: #ff0000;
+  font-size: 2.8rem;
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  line-height: 1.7;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-textarea {
+  width: 90%;
+  max-width: 900px;
+  min-height: 300px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1a1a1d;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: monospace;
+  resize: vertical;
+  box-shadow: 0 0 8px #ff0000;
+  transition: box-shadow 0.3s ease;
+}
+
+.email-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 16px #ff0000;
+}
+
+.submit-btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #ff0000;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #e00000;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.privacy-note {
+  margin-top: 10px;
+  color: #888;
+  font-size: 0.9rem;
+}

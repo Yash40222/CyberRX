@@ -1,5 +1,6 @@
 import React from "react";
 import "./tools.css";
+import EmailDetector from "./EmailDetector";
 
 function ToolsShowcase() {
   const tools = [
@@ -7,7 +8,7 @@ function ToolsShowcase() {
       title: "Email Spam & Scam Detector",
       desc: "Scan emails for phishing, spam, and scam patterns.",
       icon: "📧",
-      link: "/email-detector",
+      link: "/EmailDetector",
     },
     {
       title: "Phishing URL Analyzer",

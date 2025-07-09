@@ -12,6 +12,7 @@ import ComingSoon from './Components/ComingSoon';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Components/Layout';
+import EmailDetector from './Components/EmailDetector';
 
 function App() {
   useEffect(() => {
@@ -44,10 +45,12 @@ function App() {
                   <Hero />
                   <ToolsShowcase />
                   <WhyCyberRX />
+                  
                 </>
               } />
               {/* About page also inside layout */}
               <Route path="about" element={<About />} />
+              <Route path="EmailDetector" element={<EmailDetector />} />
                {/* Coming Soon Pages */}
                <Route path="pricing" element={<ComingSoon title="Pricing – Coming Soon!" />} />
   <Route path="features" element={<ComingSoon title="Features – Coming Soon!" />} />
