@@ -73,3 +73,123 @@
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* ----------------------------------------
+   OVERLAY: Brand-Guarded Locked State
+---------------------------------------- */
+
+.tool-card {
+  position: relative;
+  overflow: hidden; /* so overlay stays inside the card */
+  transition: filter 0.3s ease;
+}
+
+.tool-card .locked-overlay ~ * {
+  filter: grayscale(40%) brightness(0.8);
+}
+
+.locked-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* see-through dark layer */
+  backdrop-filter: blur(3px); /* subtle blur for hacker glass effect */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* stops user clicks on locked stuff */
+  z-index: 2;
+}
+
+/* Add subtle glitch grid lines for style (optional) */
+.locked-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.05) 0px,
+      rgba(255, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.05) 0px,
+      rgba(255, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  z-index: 0;
+}
+
+.locked-overlay > * {
+  z-index: 1;
+}
+
+/* Logo shield */
+.shield-icon {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 0 5px red);
+  animation: pulseGlow 2s infinite;
+}
+
+/* "Under Development" flicker text */
+.locked-text {
+  margin-top: 10px;
+  color: red;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-shadow: 0 0 6px red;
+  animation: flicker 3s infinite;
+}
+
+/* Hover: deepen the blur & overlay shade */
+.tool-card:hover .locked-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* Pulse glow for logo */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px red);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px red);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px red);
+  }
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999% {
+    opacity: 0.3;
+  }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.shield-icon {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 0 5px red);
+  animation: pulseGlow 2s infinite;
+  border-radius: 50%; /* <-- makes it a circle! */
+}
