@@ -32,7 +32,7 @@ function ToolsShowcase() {
       title: "Website Trust Score",
       desc: "Analyze site reputation and SSL/WHOIS for safety score.",
       icon: "✅",
-      link: "/trust-score",
+      link: "/TrustScoreChecker",
     },
   ];
 
