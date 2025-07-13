@@ -18,7 +18,7 @@ export default function TrustScoreChecker() {
     setDetailsVisible(false);
 
     try {
-      const response = await fetch("https://web-production-f594c.up.railway.app", {
+      const response = await fetch("https://web-production-f594c.up.railway.app/api/check-score", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
