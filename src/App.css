@@ -93,7 +93,7 @@ main, .content, .tools-showcase, .hero, .whatever {
 }
 
 /* Show only on mobile */
-@media (max-width: 1653px) {
+@media (max-width: 658px) {
   .mobile-warning {
     display: flex;
   }
