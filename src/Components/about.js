@@ -34,7 +34,7 @@ const About = () => {
           <div className="about-block">
             <h3>Who's Behind Cyber-RX?</h3>
             <p>
-              👨‍💻 A solo dev named <span className="about-highlight">Yashdeep Chaurasia</span>, fueled by coffee and curiosity.
+              👨‍💻 Two devs named <span className="about-highlight">Yashdeep Chaurasia and Krishna Patel</span>, fueled by coffee and curiosity.
               Cyber-RX proves that conviction + code beats any budget.
             </p>
           </div>
