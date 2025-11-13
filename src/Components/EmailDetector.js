@@ -12,7 +12,7 @@ const EmailDetector = () => {
     setResult(""); // Clear old result
 
     try {
-      const response = await fetch("https://web-production-578a9.up.railway.app/predict", {
+      const response = await fetch("https://web-production-4dd8d.up.railway.app/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: emailText }),
